@@ -1,16 +1,19 @@
-<?php 
-$x=6;
-$y=7;
-echo("Tabliczka mnożenia<br><hr>");
-echo("<table border=1>");
-for($j=1;$j<=$x;$j++){
-    echo("<tr>");
-    for($i=1;$i<=$y;$i++){
-        $w=$i*$j;
-        echo("$j * $i = $w <br>");
-        echo("<td>$w</td>");
+<?php
+$a=10;
+$b=20;
+echo"<TABLE border=1><TR><TD bgcolor=lightblue>x</TD>";
+for($x=1;$x<=$a;$x++){
+    echo"<TD bgcolor=yellow>$x</TD>";
     }
-    echo("</tr>");
-}
-echo("</table>");
+echo"</TR>";
+
+for($y=1;$y<=$b;$y++){
+    echo"<TR><TD bgcolor=grey>$y</TD>";
+for($x=1;$x<=$a;$x++) {
+	$w=$x*$y;   
+	echo"<TD>$w</TD>";
+    }	   
+    echo"</TR>";
+    }	  
+    echo"</TABLE>";
 ?>
