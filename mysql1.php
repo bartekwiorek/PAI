@@ -5,7 +5,7 @@
   $grsz=0;
   if(isset($_POST['grsz'])) {$grsz=$_POST['grsz'];};
   
-  $id=mysqli_connect("localhost","root","","iv_ti_1");
+  $id=mysqli_connect("localhost","root","","4ti_bw");
   $sql="SELECT towary.tid,towary.nazwa,towary.jm,
         towary.cena_netto,towary.barcod,towary.stan,
 		towary.promocja,vat.stawka,grupy.nazwa AS ngr 
