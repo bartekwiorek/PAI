@@ -3,7 +3,7 @@
 $im = ImageCreateTrueColor(600, 600);
 
 //ImageColorAllocate (pict, R, G, B);
-$czarny = ImageColorAllocate ($im, 0, 0, 0);
+$czarny = ImageColorAllocate($im, 0, 0, 0);
 $zielony = ImageColorAllocate($im, 141, 242, 102);
 $czerwony = ImageColorAllocate($im, 255, 0, 0);
 $niebieski = ImageColorAllocate($im, 0, 0, 180);
@@ -11,6 +11,7 @@ $bialy = ImageColorAllocate($im, 255, 255, 255);
 $tlo = ImageColorAllocate($im, 0, 206, 209);
 $srodek=ImageColorAllocate($im, 176, 224, 230);
 $pomaranczowy=ImageColorAllocate($im,255, 69, 0);
+$szary=ImageColorAllocate($im,128, 128, 128);
 
 for($i=0; $i<=600; $i++){
    ImageLine($im,0,$i,600,$i,$tlo);
@@ -107,27 +108,32 @@ ImageFill($im,270,255,$czarny);
 
 //guziki
 ImageRectangle($im, 295, 305, 305, 295, $czarny);
+ImageFill($im,300,300,$czarny);
 ImageRectangle($im, 295, 320, 305, 310, $czarny);
+ImageFill($im,300,315,$czarny);
 ImageRectangle($im, 295, 335, 305, 325, $czarny);
+ImageFill($im,300,330,$czarny);
 ImageRectangle($im, 295, 350, 305, 340, $czarny);
+ImageFill($im,300,345,$czarny);
 ImageRectangle($im, 295, 365, 305, 355, $czarny);
+ImageFill($im,300,360,$czarny);
 ImageRectangle($im, 295, 380, 305, 370, $czarny);
+ImageFill($im,300,375,$czarny);
 ImageRectangle($im, 295, 395, 305, 385, $czarny);
+ImageFill($im,300,390,$czarny);
 ImageRectangle($im, 295, 410, 305, 400, $czarny);
+ImageFill($im,300,405,$czarny);
 
 
+ImageLine($im,275,165,325,165,$szary);
+ImageLine($im,275,175,325,175,$szary);
 
-
-
-
-
-
-
-
-
-ImageLine($im,275,165,325,165,$bialy);
-
-ImageLine($im,275,175,325,175,$bialy);
+ImageRectangle($im, 280, 165, 290, 175, $szary);
+ImageFill($im,285,170,$szary);
+ImageRectangle($im, 295, 165, 305, 175, $szary);
+ImageFill($im,300,170,$szary);
+ImageRectangle($im, 310, 165, 320, 175, $szary);
+ImageFill($im,315,170,$szary);
 
 
 ImageString($im, 5, 275, 570, "Balwan", $czarny);
