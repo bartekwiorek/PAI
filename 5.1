@@ -14,14 +14,19 @@ function kalkulator(){
         alert('Liczba nie może być zerem')
     }
 
-    var y = x*z
-    document.write('Mnożenie X i Y to: ', y,'<br>')
-    var y = x/z
-    document.write('Dzielenie X i Y to: ', y,'<br>')
-    var y = x+z
-    document.write('Dodawanie X i Y to: ', y,'<br>')
-    var y = x-z
-    document.write('Odejmowanie X i Y to: ', y,'<br>')
+    var Mnoz = x*z
+    var Dzie = x/z
+    var Doda = x+z
+    var Odej = x-z
+
+    Dodawanie.innerHTML=Doda
+    Dzielenie.innerHTML=Dzie
+    Mnożenie.innerHTML=Mnoz
+    Odejmowanie.innerHTML=Odej
 }
 </script>
+<p id="Dodawanie">Dodawanie</p>
+<p id="Odejmowanie">Odejmowanie</p>
+<p id="Dzielenie">Dzielenie</p>
+<p id="Mnożenie">Mnożenie</p>
 
