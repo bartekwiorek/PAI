@@ -1,0 +1,27 @@
+<INPUT type = 'number' id='x'>
+<INPUT type = 'number' id='z'>   
+<INPUT type = 'button' id='t' value='kalkulator' onClick='kalkulator()'>
+<script>
+
+function kalkulator(){
+    var x=document.getElementById('x').value;
+    var z=document.getElementById('z').value;
+
+    x=parseFloat(x)
+    z=parseFloat(z)
+    
+    if(x==0 || z==0) {
+        alert('Liczba nie może być zerem')
+    }
+
+    var y = x*z
+    document.write('Mnożenie X i Y to: ', y,'<br>')
+    var y = x/z
+    document.write('Dzielenie X i Y to: ', y,'<br>')
+    var y = x+z
+    document.write('Dodawanie X i Y to: ', y,'<br>')
+    var y = x-z
+    document.write('Odejmowanie X i Y to: ', y,'<br>')
+}
+</script>
+
