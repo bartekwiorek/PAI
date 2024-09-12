@@ -1,0 +1,60 @@
+<!-- NIE ZACZĘTE -->
+<p id='l1'>.</p>
+<SELECT id='o'>
+  <OPTION value=1>+</OPTION>
+  <OPTION value=2>*</OPTION>
+  <OPTION value=3>-</OPTION>
+  <OPTION value=4>/</OPTION>
+</SELECT>
+<p id='l2'>.</p>
+<INPUT type='button' id='b' value='OBLICZ' onclick='licz()'>
+<p id='miejsce'>Tu będą wyniki</p>
+
+<SCRIPT>
+function licz()
+{
+ var c=0
+ var x=document.getElementById('x').value;
+ var y=document.getElementById('y').value;
+ var o=document.getElementById('o').value;
+ var h=""
+ x=parseInt(x)
+ y=parseInt(y)
+ o=parseInt(o)
+ if(o==1)
+ {
+   c=x+y
+   h=h + x + ' + ' + y + ' = ' + c + '<br>'
+ }
+ 
+ if(o==2)
+ {
+   c=x*y
+   h=h + x + ' * ' + y + ' = ' + c + '<br>'
+ }
+ 
+ if(o==3)
+ {
+   c=x-y
+   h=h + x + ' - ' + y + ' = ' + c + '<br>'
+ }
+ 
+ if ((o==4)&(y!=0))
+ {
+   c=x/y
+   h=h + x + ' / ' + y + ' = ' + c + '<br>'
+ }
+
+ miejsce.innerHTML=h
+ return 0
+}
+
+var u="" 
+var i=0
+for(i=1;i<1000;i++)
+{
+ u=u+"<OPTION value='"+i+"'>"+i+"</OPTION>"
+}
+l1.innerHTML="<SELECT id='x'>"+u+"</SELECT>"
+l2.innerHTML="<SELECT id='y'>"+u+"</SELECT>"
+</SCRIPT>   
