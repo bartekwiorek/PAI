@@ -1,21 +1,16 @@
-<INPUT type='text' id='x'>
-<INPUT type='button' id='b' value='OBLICZ' onclick='lancuchy()'>
+<input type="text" id="h">
+<input type="button" value="od tylu" onclick="lancuchy()">
 <p id='miejsce'>.</p>
-<SCRIPT>
 
-function lancuchy()
-{
- var x=document.getElementById('x').value;
- var h=""
- var dl=x.length
- var wy=x.substr(2,4)
- var ko=x.charCodeAt(2)
- var du=x.toUpperCase()
- h=h+dl
- h=h+" "+wy
- h=h+" "+ko
- h=h+" "+du
- miejsce.innerHTML=h
- return 0
+<SCRIPT>
+function lancuchy() {
+    var x = document.getElementById('h').value;
+    var dl = x.length;
+    var odTylu = '';
+
+    for (var i = dl - 1; i >= 0; i--) {
+        odTylu += x[i];
+    }
+    document.getElementById('miejsce').innerHTML = odTylu.toUpperCase();
 }
 </SCRIPT>
