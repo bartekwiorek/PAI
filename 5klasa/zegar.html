@@ -1,7 +1,16 @@
-<iNPUT type="button" value="czas" onclick="zegar_astronomiczny()">
-    <p id='miejsce'>.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zegar</title>
+</head>
+<body>
+<INPUT type="button" value="czas" onclick="zegar_astronomiczny()">
+<p id='miejsce' style="text-align: center;">.</p>
 <script>
-
+    czas();
+    
     function zegar_astronomiczny(){
     data = new Date();
     rok = data.getFullYear();
@@ -16,7 +25,11 @@
     if(go<10){go="0"+go}
     if(mi<10){mi="0"+mi}
     if(se<10){se="0"+se}
-    
+
+    setTimeout(zegar_astronomiczny,1000);
     miejsce.innerHTML = go+ ':' + mi+ ':' + se + "<br>" + dn+ '-' + mc+ '-' + rok;
     }
 </script>
+
+</body>
+</html>
