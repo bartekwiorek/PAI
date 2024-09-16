@@ -10,6 +10,13 @@
     go = data.getHours();
     mi = data.getMinutes();
     se = data.getSeconds();
+
+    if(dn<10){dn="0"+dm}
+    if(mc<10){mc="0"+mc}
+    if(go<10){go="0"+go}
+    if(mi<10){mi="0"+mi}
+    if(se<10){se="0"+se}
+    
     miejsce.innerHTML = go+ ':' + mi+ ':' + se + "<br>" + dn+ '-' + mc+ '-' + rok;
     }
 </script>
