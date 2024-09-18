@@ -1,0 +1,72 @@
+* {
+    font-family: Cambria;
+}
+
+body {
+    margin: 0;
+}
+
+#lewy,
+#lewyy {
+    background-color: #E1BEE7;
+    width: 25%;
+}
+
+#lewy {
+    height: 400px;
+    float: left;
+}
+
+#lewyy {
+    height: 330px;
+    float: left;
+}
+
+#prawy,
+#prawyy {
+    width: 75%;
+    font-size: 170%;
+    text-align: center;
+}
+
+#prawy {
+    background-color: #9C64A6;
+    color: white;
+    height: 150px;
+    letter-spacing: 5px;
+    float: left 
+}
+
+#prawyy {
+    color: indigo;
+    height: 580px;
+    float: right;
+}
+
+#footer {
+    background-color: #9C64A6;
+    color: white;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+img:hover {
+    padding: 3px;
+    border: 1px dashed indigo
+}
+
+img {
+    padding: 4px;
+    margin: 15px;
+}
+
+#glownej {
+    padding: 25px;
+}
