@@ -1,0 +1,4 @@
+select * form uslugi where cena >= 50;
+seclect avg(cena) as sredniacena, count(*) as liczbauslug from uslugi where rodzaj = 1;
+create user kosmetyczka@localhost idenrified via mysql_native_password USING '****'; grant usage on *.* to 'kosmetyczka'@'localhost' REQUIRE none with MAX_QERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+grant all privileges on 'salon'.'uslugi' to Kosmetyczka@localhost' with grant option;
