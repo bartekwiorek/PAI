@@ -38,7 +38,7 @@ a:hover{
 }
 li{
     display: inline-block;
-    margin: 5px;
-    padding: 10px;
+    padding: 5px;
+    margin: 10px;
     border-bottom: 1px solid white;
 }
