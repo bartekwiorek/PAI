@@ -1,0 +1,19 @@
+#kontener{
+    font-style: helvetica, sans-serif;
+    background-color: linen;
+    color: #222;
+    padding: auto;
+    width: 90%;
+}
+#baner1, #baner2{
+    background-color: black;
+    color: white;
+    width: 50%;
+    height: 100px;
+}
+#blokglowny{
+    margin: 20px;
+}
+#stopka{
+    
+}
