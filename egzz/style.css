@@ -1,0 +1,39 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: auto;
+}
+#lewy{
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+    float: left;
+}
+#prawy{
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+}
+#stopka{
+    background-color: dimgray;
+    color: white;
+}
+#Indigo{
+    background-color: indigo;
+}
+#SteelBlue{
+    background-color: steelblue;
+}
+#Olive{
+    background-color: olive;
+}
+#zdjecie{
+    float: left;
+    border: 1px solid white;
+    padding: 10px
+}
+#Lorem{
+    float: right;
+    padding: 10px;
+}

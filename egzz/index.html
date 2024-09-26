@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="skrypt.js"></script>
+    <section id="lewy">
+        <h1>Konfigurator stylu</h1>
+        <p>Podaj kolor tła</p>
+        <button id="Indigo" onclick="button_indygo()">Indigo</button>
+        <button id="SteelBlue" onclick="button_SteelBlue()">SteelBlue</button>
+        <button id="Olive" onclick="button_Olive()">Olive</button>
+        
+        <p>Podaj kolor czcionki</p>
+        <select id="kolorczcionki" onchange="zmianakoloruczcionki()">
+            <option>White</option>
+            <option>Tan</option>
+            <option>Bisque</option>
+            <option>Plum</option>
+        </select>
+        
+        <p>Podaj rozmiar czcionki w procentach, np. 200%</p>
+        <input type="text" value="100%" id="rozmiarczcionki" onchange="zmianarozmiaruczcionki()">
+
+        <p>Czy rysunek ma mieć ramkę?</p>
+        <input type="checkbox" id="check" onchange="checkchecked()" checked>Rysuj ramkę</input>
+        <p>Jaki jest typ punktora listy?</p>
+            <ul>
+                <input type="radio">dysk</input><br>
+                <input type="radio">kwadrat</input><br>
+                <input type="radio">okrąg</input>
+            </ul>
+    </section>
+
+    <section id="prawy">
+        <img src="gibraltar.jpg" alt="półwysep Gibraltar" id="zdjecie">
+            <ul>
+                <li>element 1</li>
+                <li>element 2</li>
+                <li>element 3</li>
+            </ul>
+        <p id="Lorem">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </section>
+    <section id="stopka">
+        <p>Autor: Bartek</p>
+    </section>
+</body>
+</html>
