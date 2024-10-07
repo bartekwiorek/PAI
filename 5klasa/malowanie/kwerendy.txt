@@ -1,0 +1,4 @@
+select cena, pojemnosc from farby where kolor="czerwony";
+select kolor, (cena/pojemnosc) as cena_jednostkowa from farby;
+select farby.kolor, malowanie.id_pomieszczenia,farby.id_farby from farby, malowanie where farby.id_farby = malowanie.id_farby and malowanie.id_pomieszczenia="3" GROUP by id_farby;
+CREATE view pomieszczenie1 as select id_sciany, id_farby, liczba_puszek from malowanie where id_pomieszczenia = 1;
