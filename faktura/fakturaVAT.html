@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +7,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="glowny">
+    <section id="kontener">
         <section id="naglowek">
-            <h1>Faktura</h1>
+            <p>faktura</p>
         </section>
 
-        <section>
+        <section id="faktura">
             <label for="nazwa_towaru">Nazwa towaru</label>
-            <input type="text" id="nazwa_towaru"><br>
+            <input type="text" id="nazwa_towaru" onchange="ceny()"><br>
 
+            <label for="Ilość">Ilość</label>
+            <input type="text" id="ilosc" onchange="ceny()"><br>
+
+            <label for="cena_jednostkowa">Cena jednostkowa</label>
+            <input type="number" min="0" id="cena_jednostkowa" value="Cena jednostkowa" onchange="ceny()"><br>
+        
+
+            <label>Stawka VAT</label>
+            <select id="stawka_vat" onchange="vaty()">
+                <option value="" hidden></option>
+                <option value="23">23%</option>
+                <option value="8">8%</option>
+                <option value="5">5%</option>
+                <option value="0">0%</option>
+                <option value="01">ZW</option>
+            </select><br>
+
+        
             <label for="pkwiu_ean">PKWiU/EAN</label>
             <input type="text" id="pkwiu_ean"><br>
 
-            <label for="stawka_vat">Stawka VAT</label>
-            <select name="Stawka Vat" id="stawka_vat" onchange="VATy()">
-                <option id="opt1" onchange="VATy()">23%</option>
-                <option id="opt2" onchange="VATy()">8%</option>
-                <option id="opt3" onchange="VATy()">5%</option>
-                <option id="opt4" onchange="VATy()">0%</option>
-                <option id="opt5" onchange="VATy()">ZW</option>
-            </select><br>
-
-            <label for="cena_jednostkowa">Cena jednostkowa</label>
-            <input type="number" min="0" id="cena_jednostkowa" value="Cena jednostkowa">
-        
-            <p id="wartosc_netto">Wartość netto: </p>
-            <p id="stawka_vat">Stawka VAT: </p>
-            <p id="wartosc_brutto">Wartość brutto: </p>
-
+            <br>
             <hr>
 
-            <table>
-
-            </table>
+            <center><table border="1">
+                <tr> 
+                    <th>LP</th>
+                    <th>Nazwa towaru</th>
+                    <th>Ilość</th>
+                    <th>Cena netto</th>
+                    <th>Wartość netto</th>
+                    <th>VAT</th>
+                    <th>Kwota VAT</th>
+                    <th>Wartość brutto</th>
+                </tr>
+                <tr>
+                    <td id="td1">1</td>
+                    <td id="td2"></td>
+                    <td id="td3"></td>
+                    <td id="td4"></td>
+                    <td id="td5"></td>
+                    <td id="td6"></td>
+                    <td id="td7"></td>
+                    <td id="td8"></td>
+                </tr>
+            </table></center>
         </section>
     </section>
     <script src="main.js"></script>
