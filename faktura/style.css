@@ -18,6 +18,22 @@
     text-align: right;
     padding-right: 200px;
     font-size: 18px;
+    display: flex;
+}
+#naglowek_prawo{
+    border: 1px white solid;
+    width: 49%;
+    text-align: center;
+
+}
+#naglowek_lewo{
+    text-align: center;
+    border: 1px white solid;
+    width: 49%;
+    float: right;
+}
+#nrfav{
+    float: left;
 }
 #faktura{
     padding: 10px;

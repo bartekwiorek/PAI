@@ -24,6 +24,14 @@ function miasto() {
     let miast = document.getElementById("miejscowosc").value
     miejsc.innerHTML= "Miejscowość: <b>" + miast + "</b>"
 }
+function nabywca() {
+    let naby = document.getElementById("nabywca").value
+    nabywc.innerHTML= "Nabywca: <b>" + naby + "</b>"
+}
+function wystawca() {
+    let wyst = document.getElementById("wystawca").value
+    wystawc.innerHTML= "Wystawca: <b>" + wyst + "</b>"
+}
 function ceny() {
     nazwa_towaru = document.getElementById("nazwa_towaru").value
     td2.innerHTML = nazwa_towaru

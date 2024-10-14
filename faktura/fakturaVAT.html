@@ -36,17 +36,28 @@
             <label for="miejscowosc">Miejscowość</label>
             <input type="text" id="miejscowosc" onchange="miasto()"><br>
 
+            <label for="wystawca">Wystawca</label>
+            <input type="text" id="wystawca" onchange="wystawca()"><br>
+
+            <label for="nabywca">Nabywca</label>
+            <input type="text" id="nabywca" onchange="nabywca()"><br>
+
             <br>
             <hr>
 
             <section id="naglowek">
-                <p id="data_wystawienia">Data wystawienia:</p>
-                <p id="data_sprzedazy">Data sprzedaży:</p>
-                <p id="miejsc">Miejscowość:</p>
+                <section id="naglowek_lewo">
+                    <p id="wystawc">Wystawca: </p>
+                    <p id="nabywc">Nabywca: </p>
+                    <p id="miejsc">Miejscowość: </p>
+                </section>
+                <section id="naglowek_prawo">
+                    <p id="data_wystawienia">Data wystawienia:</p>
+                    <p id="data_sprzedazy">Data sprzedaży:</p>
+                </section>
                 <section id="nrfav">
                     <p id="numer_faktury">Faktura VAT</p>
                 </section>
-    
             </section>
 
             <center><table border="1">
