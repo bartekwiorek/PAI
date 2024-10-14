@@ -1,4 +1,3 @@
-function data() {
     data = new Date();
     rok = data.getFullYear();
     mc = data.getMonth() + 1;
@@ -12,7 +11,18 @@ function data() {
     if(go<10){go="0"+go}
     if(mi<10){mi="0"+mi}
     if(se<10){se="0"+se}
-    miejsce.innerHTML = go+ ':' + mi+ ':' + se + "<br>" + dn+ '-' + mc+ '-' + rok;
+
+    data_sprzedazy.innerHTML = "<i>Data sprzedaży: <b>" + dn + '-' + mc + '-' + rok + "</b></i>"
+    data_wystawienia.innerHTML = "<i>Data wystawienia: <b>" + dn + '-' + mc + '-' + rok + "</b></i>";
+
+    nr_faktury = 1
+    mc=parseInt(mc)
+    rok=parseInt(rok)
+    numer_faktury.innerHTML = "Faktura VAT <b>" + nr_faktury +"/"+ mc +"/" + rok + "</b>"
+
+function miasto() {
+    let miast = document.getElementById("miejscowosc").value
+    miejsc.innerHTML= "Miejscowość: <b>" + miast + "</b>"
 }
 function ceny() {
     nazwa_towaru = document.getElementById("nazwa_towaru").value

@@ -14,13 +14,14 @@
     border: 1px black solid;
     padding: 10px;
     margin: 10px;
-    background-color: rgb(60, 60, 60);
+    background-color: grey;
+    text-align: right;
+    padding-right: 200px;
+    font-size: 18px;
 }
-#logo{
-    border: 1px white solid;
-    height: 150px;
-    width: 300px;
-    margin-left: 150px;
+#faktura{
+    padding: 10px;
+    margin: 10px;
 }
 hr {
     border-top: 1px solid rgb(0, 0, 0);

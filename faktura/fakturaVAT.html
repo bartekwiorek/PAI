@@ -8,10 +8,6 @@
 </head>
 <body>
     <section id="kontener">
-        <section id="naglowek">
-            <p>faktura</p>
-        </section>
-
         <section id="faktura">
             <label for="nazwa_towaru">Nazwa towaru</label>
             <input type="text" id="nazwa_towaru" onchange="ceny()"><br>
@@ -37,8 +33,21 @@
             <label for="pkwiu_ean">PKWiU/EAN</label>
             <input type="text" id="pkwiu_ean"><br>
 
+            <label for="miejscowosc">Miejscowość</label>
+            <input type="text" id="miejscowosc" onchange="miasto()"><br>
+
             <br>
             <hr>
+
+            <section id="naglowek">
+                <p id="data_wystawienia">Data wystawienia:</p>
+                <p id="data_sprzedazy">Data sprzedaży:</p>
+                <p id="miejsc">Miejscowość:</p>
+                <section id="nrfav">
+                    <p id="numer_faktury">Faktura VAT</p>
+                </section>
+    
+            </section>
 
             <center><table border="1">
                 <tr> 
