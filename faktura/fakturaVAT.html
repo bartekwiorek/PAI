@@ -19,15 +19,15 @@
                 </td>
                 <td>
                     <label for="Ilość">Ilość</label>
-                    <input type="text" id="ilosc1" onchange="ceny()"><br>
+                    <input type="text" id="ilosc1" onchange="ceny()" onchange="sumy()"><br>
                 </td>
                 <td>
                     <label for="cena_jednostkowa">Cena jednostkowa</label>
-                    <input type="number" min="0" id="cena_jednostkowa1" value="Cena jednostkowa" onchange="ceny()"><br>
+                    <input type="number" min="0" id="cena_jednostkowa1" value="Cena jednostkowa" onchange="ceny()"  onchange="sumy()"><br>
                 </td>
                 <td>
                     <label>Stawka VAT</label>
-                    <select id="stawka_vat1" onchange="vaty()">
+                    <select id="stawka_vat1" onchange="vaty()" onchange="sumy()">
                         <option value="" hidden></option>
                         <option value="23">23%</option>
                         <option value="8">8%</option>
@@ -49,15 +49,15 @@
             </td>
             <td>
                 <label for="Ilość">Ilość</label>
-                <input type="text" id="ilosc2" onchange="ceny()"><br>
+                <input type="text" id="ilosc2" onchange="ceny()"  onchange="sumy()"><br>
             </td>
             <td>
                 <label for="cena_jednostkowa">Cena jednostkowa</label>
-                <input type="number" min="0" id="cena_jednostkowa2" value="Cena jednostkowa" onchange="ceny()"><br>
+                <input type="number" min="0" id="cena_jednostkowa2" value="Cena jednostkowa" onchange="ceny()"  onchange="sumy()"><br>
             </td>
             <td>
                 <label>Stawka VAT</label>
-                <select id="stawka_vat2" onchange="vaty()">
+                <select id="stawka_vat2" onchange="vaty()" onchange="sumy()">
                     <option value="" hidden></option>
                     <option value="23">23%</option>
                     <option value="8">8%</option>
@@ -78,15 +78,15 @@
             </td>
             <td>
                 <label for="Ilość">Ilość</label>
-                <input type="text" id="ilosc3" onchange="ceny()"><br>
+                <input type="text" id="ilosc3" onchange="ceny()" onchange="sumy()"><br>
             </td>
             <td>
                 <label for="cena_jednostkowa">Cena jednostkowa</label>
-                <input type="number" min="0" id="cena_jednostkowa3" value="Cena jednostkowa" onchange="ceny()"><br>
+                <input type="number" min="0" id="cena_jednostkowa3" value="Cena jednostkowa" onchange="ceny()"  onchange="sumy()"><br>
             </td>
             <td>
                 <label>Stawka VAT</label>
-                <select id="stawka_vat3" onchange="vaty()">
+                <select id="stawka_vat3" onchange="vaty()" onchange="sumy()">
                     <option value="" hidden></option>
                     <option value="23">23%</option>
                     <option value="8">8%</option>
@@ -107,15 +107,15 @@
             </td>
             <td>
                 <label for="Ilość">Ilość</label>
-                <input type="text" id="ilosc4" onchange="ceny()"><br>
+                <input type="text" id="ilosc4" onchange="ceny()" onchange="sumy()"><br>
             </td>
             <td>
                 <label for="cena_jednostkowa">Cena jednostkowa</label>
-                <input type="number" min="0" id="cena_jednostkowa4" value="Cena jednostkowa" onchange="ceny()"><br>
+                <input type="number" min="0" id="cena_jednostkowa4" value="Cena jednostkowa" onchange="ceny()" onchange="sumy()"><br>
             </td>
             <td>
                 <label>Stawka VAT</label>
-                <select id="stawka_vat4" onchange="vaty()">
+                <select id="stawka_vat4" onchange="vaty()" onchange="sumy()">
                     <option value="" hidden></option>
                     <option value="23">23%</option>
                     <option value="8">8%</option>
@@ -136,15 +136,15 @@
             </td>
             <td>
                 <label for="Ilość">Ilość</label>
-                <input type="text" id="ilosc5" onchange="ceny()"><br>
+                <input type="text" id="ilosc5" onchange="ceny()" onchange="sumy()"><br>
             </td>
             <td>
                 <label for="cena_jednostkowa">Cena jednostkowa</label>
-                <input type="number" min="0" id="cena_jednostkowa5" value="Cena jednostkowa" onchange="ceny()"><br>
+                <input type="number" min="0" id="cena_jednostkowa5" value="Cena jednostkowa" onchange="ceny()" onchange="sumy()"><br>
             </td>
             <td>
                 <label>Stawka VAT</label>
-                <select id="stawka_vat5" onchange="vaty()">
+                <select id="stawka_vat5" onchange="vaty()" onchange="sumy()">
                     <option value="" hidden></option>
                     <option value="23">23%</option>
                     <option value="8">8%</option>
@@ -252,8 +252,54 @@
             </table></center>
 
             <hr>
+            <center>
             <section id="Podsumowanie">
-                <p id="Kwota_do_zapłaty">Kwota :</p>
+                <p id="Kwota_do_zapłaty">Podsumowanie: Miało działać, przekombinowałem </p>
+                <table border="1">
+                    <tr>
+                        <th>SUMA netto</th>
+                        <th>Stawka VAT</th>
+                        <th>SUMA VAT</th>
+                        <th>SUMA brutto</th>
+                    </tr>
+                    <tr>
+                        <td ip="miejsc1"></td>
+                        <td>23%</td>
+                        <td ip="miejsc11"></td>
+                        <td ip="miejsc111"></td>
+                    </tr>
+                    <tr>
+                        <td ip="miejsc2"></td>
+                        <td>8%</td>
+                        <td ip="miejsc22"></td>
+                        <td ip="miejsc222"></td>
+                    </tr>
+                    <tr>
+                        <td ip="miejsc3"></td>
+                        <td>5%</td>
+                        <td ip="miejsc33"></td>
+                        <td ip="miejsc333"></td>
+                    </tr>
+                    <tr>
+                        <td ip="miejsc4"></td>
+                        <td>0%</td>
+                        <td ip="miejsc44"></td>
+                        <td ip="miejsc444"></td>
+                    </tr>
+                    <tr>
+                        <td ip="miejsc4"></td>
+                        <td>ZW</td>
+                        <td ip="miejsc44" style="border-bottom: 0px solid grey;"></td>
+                        <td ip="miejsc444"></td>
+                    </tr>
+                </table>
+            </center>
+
+            <hr><br>
+            
+            <p id="nettoo">Kwota Netto: </p>
+            <p id="vatt">Wartość VAT: </p>
+            <p id="bruttoo">Kwota Brutto: </p>
             </section>
         </section>
     </section>

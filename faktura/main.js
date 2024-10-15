@@ -12,8 +12,8 @@
     if(mi<10){mi="0"+mi}
     if(se<10){se="0"+se}
 
-    data_sprzedazy.innerHTML = "<i>Data sprzedaży: <b>" + dn + '-' + mc + '-' + rok + "</b></i>"
-    data_wystawienia.innerHTML = "<i>Data wystawienia: <b>" + dn + '-' + mc + '-' + rok + "</b></i>";
+    data_sprzedazy.innerHTML = "Data sprzedaży: " + dn + '-' + mc + '-' + rok 
+    data_wystawienia.innerHTML = "Data wystawienia: " + dn + '-' + mc + '-' + rok
 
     nr_faktury = 1
     mc=parseInt(mc)
@@ -115,41 +115,194 @@ function vaty() {
     let vat5 = document.getElementById("stawka_vat5").value
     vat5 = parseInt(vat5)
 
-    //tutaj
-    kwota_vat = 3
-    kwota_vat = parseFloat(kwota_vat)
-        if (vat == "23") {
-            vat = parseFloat(vat)
-            td6.innerHTML = vat + "%"
-            vat="0."+vat //sposobem z dat
+//1
+        if (vat1 == "23") {
+            vat1 = parseFloat(vat1)
+            td6.innerHTML = vat1 + "%"
+            vat1="0."+vat1 //sposobem z dat
         }
-        if (vat == "8") {
-            vat = parseFloat(vat)
-            td6.innerHTML = vat + "%"
-            vat="0.0"+vat
+        if (vat1 == "8") {
+            vat1 = parseFloat(vat1)
+            td6.innerHTML = vat1 + "%"
+            vat1="0.0"+vat1
         }
-        if (vat == "5") {
-            vat = parseFloat(vat)
+        if (vat1 == "5") {
+            vat1 = parseFloat(vat1)
             td6.innerHTML = vat + "%"
-            vat="0.0"+vat
+            vat1="0.0"+vat1
 
         }
-        if (vat == "0") {
-            vat = parseFloat(vat)
-            td6.innerHTML = vat + "%"
+        if (vat1 == "0") {
+            vat1 = parseFloat(vat1)
+            td6.innerHTML = vat1 + "%"
         }
-        if (vat == "01") {
-            vat = 0
+        if (vat1 == "01") {
+            vat1 = 0
             td6.innerHTML =  "ZW"
         }
+//2
+        if (vat2 == "23") {
+            vat2 = parseFloat(vat2)
+            td66.innerHTML = vat2 + "%"
+            vat2="0."+vat2 //sposobem z dat
+        }
+        if (vat2 == "8") {
+            vat2 = parseFloat(vat2)
+            td66.innerHTML = vat2 + "%"
+            vat2="0.0"+vat2
+        }
+        if (vat2 == "5") {
+            vat2 = parseFloat(vat2)
+            td66.innerHTML = vat2 + "%"
+            vat2="0.0"+vat2
+
+        }
+        if (vat2 == "0") {
+            vat2 = parseFloat(vat2)
+            td66.innerHTML = vat2 + "%"
+        }
+        if (vat2 == "01") {
+            vat2 = 0
+            td66.innerHTML =  "ZW"
+        }
+//3
+        if (vat3 == "23") {
+            vat3 = parseFloat(vat3)
+            td666.innerHTML = vat3 + "%"
+            vat3="0."+vat3 //sposobem z dat
+        }
+        if (vat3 == "8") {
+            vat3 = parseFloat(vat3)
+            td666.innerHTML = vat3 + "%"
+            vat3="0.0"+vat3
+        }
+        if (vat3 == "5") {
+            vat3 = parseFloat(vat3)
+            td666.innerHTML = vat3 + "%"
+            vat3="0.0"+vat3
+
+        }
+        if (vat3 == "0") {
+            vat3 = parseFloat(vat3)
+            td666.innerHTML = vat3 + "%"
+        }
+        if (vat3 == "01") {
+            vat3 = 0
+            td666.innerHTML =  "ZW"
+        }
+//4
+        if (vat4 == "23") {
+            vat4 = parseFloat(vat4)
+            td6666.innerHTML = vat4 + "%"
+            vat4="0."+vat4 //sposobem z dat
+        }
+        if (vat4 == "8") {
+            vat4 = parseFloat(vat4)
+            td6666.innerHTML = vat4 + "%"
+            vat4="0.0"+vat4
+        }
+        if (vat4 == "5") {
+            vat4 = parseFloat(vat4)
+            td6666.innerHTML = vat4 + "%"
+            vat4="0.0"+vat4
+
+        }
+        if (vat4 == "0") {
+            vat4 = parseFloat(vat4)
+            td6666.innerHTML = vat4 + "%"
+        }
+        if (vat4 == "01") {
+            vat4 = 0
+            td6666.innerHTML =  "ZW"
+        }
+
+//6
+        if (vat5 == "23") {
+            vat5 = parseFloat(vat5)
+            td66666.innerHTML = vat5 + "%"
+            vat5="0."+vat5 //sposobem z dat
+        }
+        if (vat5 == "8") {
+            vat5 = parseFloat(vat5)
+            td66666.innerHTML = vat5 + "%"
+            vat5="0.0"+vat5
+        }
+        if (vat5 == "5") {
+            vat5 = parseFloat(vat5)
+            td66666.innerHTML = vat5 + "%"
+            vat5="0.0"+vat5
+
+        }
+        if (vat5 == "0") {
+            vat5 = parseFloat(vat5)
+            td66666.innerHTML = vat5 + "%"
+        }
+        if (vat5 == "01") {
+            vat5 = 0
+            td66666.innerHTML =  "ZW"
+        }   
+
+        kwota_vat1 = w_netto1 * vat1
+        kwota_vat2 = w_netto2 * vat2
+        kwota_vat3 = w_netto3 * vat3
+        kwota_vat4 = w_netto4 * vat4
+        kwota_vat5 = w_netto5 * vat5
+        kwota_vat1 = parseFloat(kwota_vat1)
+        kwota_vat2 = parseFloat(kwota_vat2)
+        kwota_vat3 = parseFloat(kwota_vat3)
+        kwota_vat4 = parseFloat(kwota_vat4)
+        kwota_vat5 = parseFloat(kwota_vat5)
+        kwota_vat1 = kwota_vat1.toFixed(2)
+        kwota_vat2 = kwota_vat2.toFixed(2)
+        kwota_vat3 = kwota_vat3.toFixed(2)
+        kwota_vat4 = kwota_vat4.toFixed(2)
+        kwota_vat5 = kwota_vat5.toFixed(2)
+        td7.innerHTML = kwota_vat1  + "zł"
+        td77.innerHTML = kwota_vat2  + "zł"
+        td777.innerHTML = kwota_vat3  + "zł"
+        td7777.innerHTML = kwota_vat4  + "zł"
+        td77777.innerHTML = kwota_vat5  + "zł"
         
-        kwota_vat = w_netto * vat
-        kwota_vat = parseFloat(kwota_vat)
-        kwota_vat = kwota_vat.toFixed(2)
-        td7.innerHTML = kwota_vat  + "zł"
-        
-        wartosc_brutto = parseFloat(w_netto) + parseFloat(kwota_vat)
-        wartosc_brutto = parseFloat(wartosc_brutto)
-        wartosc_brutto = wartosc_brutto.toFixed(2)
-        td8.innerHTML = wartosc_brutto + "zł"
-    }
+        wartosc_brutto1 = parseFloat(w_netto1) + parseFloat(kwota_vat1)
+        wartosc_brutto1 = parseFloat(wartosc_brutto1)
+        wartosc_brutto1 = wartosc_brutto1.toFixed(2)
+        td8.innerHTML = wartosc_brutto1 + "zł"
+
+        wartosc_brutto2 = parseFloat(w_netto2) + parseFloat(kwota_vat2)
+        wartosc_brutto2 = parseFloat(wartosc_brutto2)
+        wartosc_brutto2 = wartosc_brutto2.toFixed(2)
+        td88.innerHTML = wartosc_brutto2 + "zł"
+
+        wartosc_brutto3 = parseFloat(w_netto3) + parseFloat(kwota_vat3)
+        wartosc_brutto3 = parseFloat(wartosc_brutto3)
+        wartosc_brutto3 = wartosc_brutto3.toFixed(2)
+        td888.innerHTML = wartosc_brutto3 + "zł"
+
+        wartosc_brutto4 = parseFloat(w_netto4) + parseFloat(kwota_vat4)
+        wartosc_brutto4 = parseFloat(wartosc_brutto4)
+        wartosc_brutto4 = wartosc_brutto4.toFixed(2)
+        td8888.innerHTML = wartosc_brutto4 + "zł"
+
+        wartosc_brutto5 = parseFloat(w_netto5) + parseFloat(kwota_vat5)
+        wartosc_brutto5 = parseFloat(wartosc_brutto5)
+        wartosc_brutto5 = wartosc_brutto5.toFixed(2)
+        td88888.innerHTML = wartosc_brutto5 + "zł"
+}
+function sumy(){
+    let suma_wartosc_netto = 0
+    let suma_kwota_VAT = 0
+    let suma_wartosc_brutto = 0
+    alert(suma_kwota_VAT)
+
+    parseFloat(suma_wartosc_netto) = parseFloat(suma_wartosc_netto + w_netto1 + w_netto2 + w_netto3 + w_netto4 + w_netto5)
+    parseFloat(suma_kwota_VAT) = parseFloat(suma_kwota_VAT + vat1 + vat2 + vat3 + vat4 + vat5)
+    parseFloat(suma_wartosc_brutto) = parseFloat(wartosc_brutto1 + wartosc_brutto2 + wartosc_brutto3 + wartosc_brutto4 + wartosc_brutto5)
+    
+    suma_wartosc_netto = parseFloat(suma_wartosc_netto)
+    suma_kwota_VAT = parseFloat(suma_kwota_VAT) 
+    suma_wartosc_brutto = parseFloat(suma_wartosc_brutto)
+
+    nettoo.innerHTML = suma_wartosc_netto
+    vatt.innerHTML = suma_kwota_VAT
+    bruttoo.innerHTML = suma_wartosc_brutto
+}

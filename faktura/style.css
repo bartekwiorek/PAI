@@ -21,14 +21,12 @@
     display: flex;
 }
 #naglowek_prawo{
-    border: 1px white solid;
     width: 49%;
     text-align: center;
 
 }
 #naglowek_lewo{
     text-align: center;
-    border: 1px white solid;
     width: 49%;
     float: right;
 }
@@ -50,9 +48,6 @@ table{
 }
 th{
     padding: 5px;
-}
-#tabelka{
-    border: 1px white solid;
 }
 td, tr{
     padding: 10px;
