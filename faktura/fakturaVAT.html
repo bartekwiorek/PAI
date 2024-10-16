@@ -8,296 +8,243 @@
 </head>
 <body>
     <section id="kontener">
+        <h2>Fakturka</h2>
+        <center>
+            <section id="naglowek">
+                <section id="naglowek_lewo">
+                    <table border="1">
+                    <tr>
+                        <td>
+                    <label for="miejscowosc">Miejscowość</label>
+                    <input type="text" id="miejscowosc" onchange="miasto()">
+                        </td>
+                        <td>
+                    <label for="wystawca">Wystawca</label>
+                    <input type="text" id="wystawca" onchange="wystawca()">
+                        </td>
+                        <td>
+                    <label for="nabywca">Nabywca</label>
+                    <input type="text" id="nabywca" onchange="nabywca()">
+                        </td>
+                    </tr>
+                </table>
+                </section>
+                <section id="naglowek_prawo">
+                    <table border="1">
+                    <tr>
+                        <td>
+                        <label for="data_wystawie">Data wystawienia</label>
+                        <input type="date" id="data_wystawie" onchange="glowny()">
+                        </td>
+                        <td>
+                        <label for="data_sprzedaz">Data sprzedaży</label>
+                        <input type="date" id="data_sprzedaz" onchange="glowny()">
+                        </td>
+                    </tr>
+                    </table>
+                    <table border="1">
+                    <tr>
+                        <td>
+                        <p id="numer_faktury">Faktura VAT</p>
+                        </td>
+                    </tr>
+                </section>
+            </table>
+        </center>
+
         <section id="faktura">
-        <center>    
+        <center>
         <table border="1" id="tabelka">
             <tr>
-                <th>LP. 1</th>
+                <th>LP</th>
+                <th>Nazwa towaru</th>
+                <th>Ilość</th>
+                <th>Cena jednostkowa</th>
+                <th>Stawka VAT</th>
+                <th>PKWiU/EAN</th>
+                <th>Wartość Netto</th>
+                <th>Wartość VAT</th>
+                <th>Wartość Brutto</th>
+            </tr>
+            <tr>
+                <td>1</td>
                 <td>
-                    <label for="nazwa_towaru">Nazwa towaru</label>
-                    <input type="text" id="nazwa_towaru1" onchange="ceny()"><br>
+                    <input type="text" id="nazwa_towaru1" onchange="glowny()">
                 </td>
                 <td>
-                    <label for="Ilość">Ilość</label>
-                    <input type="text" id="ilosc1" onchange="dwiefunkcje()"><br>
+                    <input type="text" id="ilosc1" onchange="glowny()">
                 </td>
                 <td>
-                    <label for="cena_jednostkowa">Cena jednostkowa</label>
-                    <input type="number" min="0" id="cena_jednostkowa1" value="Cena jednostkowa" onchange="ceny()"  onchange="sumy()"><br>
+                    <input type="number" min="0" id="cena_jednostkowa1" value="Cena jednostkowa" onchange="glowny()">
                 </td>
                 <td>
-                    <label>Stawka VAT</label>
-                    <select id="stawka_vat1" onchange="vaty()" onchange="sumy()">
+                        <select id="stawka_vat1" onchange="glowny()">
                         <option value="" hidden></option>
                         <option value="23">23%</option>
                         <option value="8">8%</option>
                         <option value="5">5%</option>
                         <option value="0">0%</option>
                         <option value="01">ZW</option>
-                    </select><br>
+                    </select>
                 </td>
-            <td>
-                <label for="pkwiu_ean">PKWiU/EAN</label>
-                <input type="text" id="pkwiu_ean"1><br>
-            </td>
-        </tr>
-        <tr>
-            <th>LP. 2</th>
-            <td>
-                <label for="nazwa_towaru">Nazwa towaru</label>
-                <input type="text" id="nazwa_towaru2" onchange="ceny()"><br>
-            </td>
-            <td>
-                <label for="Ilość">Ilość</label>
-                <input type="text" id="ilosc2" onchange="ceny()"  onchange="sumy()"><br>
-            </td>
-            <td>
-                <label for="cena_jednostkowa">Cena jednostkowa</label>
-                <input type="number" min="0" id="cena_jednostkowa2" value="Cena jednostkowa" onchange="ceny()"  onchange="sumy()"><br>
-            </td>
-            <td>
-                <label>Stawka VAT</label>
-                <select id="stawka_vat2" onchange="vaty()" onchange="sumy()">
-                    <option value="" hidden></option>
-                    <option value="23">23%</option>
-                    <option value="8">8%</option>
-                    <option value="5">5%</option>
-                    <option value="0">0%</option>
-                    <option value="01">ZW</option>
-                </select><br>
-            </td>
-        <td>
-            <label for="pkwiu_ean">PKWiU/EAN</label>
-            <input type="text" id="pkwiu_ean2"><br>
-        </td>
-        <tr>
-            <th>LP. 3</th>
-            <td>
-                <label for="nazwa_towaru">Nazwa towaru</label>
-                <input type="text" id="nazwa_towaru3" onchange="ceny()"><br>
-            </td>
-            <td>
-                <label for="Ilość">Ilość</label>
-                <input type="text" id="ilosc3" onchange="dwiefunkcje()"><br>
-            </td>
-            <td>
-                <label for="cena_jednostkowa">Cena jednostkowa</label>
-                <input type="number" min="0" id="cena_jednostkowa3" value="Cena jednostkowa" onchange="ceny()"  onchange="sumy()"><br>
-            </td>
-            <td>
-                <label>Stawka VAT</label>
-                <select id="stawka_vat3" onchange="vaty()" onchange="sumy()">
-                    <option value="" hidden></option>
-                    <option value="23">23%</option>
-                    <option value="8">8%</option>
-                    <option value="5">5%</option>
-                    <option value="0">0%</option>
-                    <option value="01">ZW</option>
-                </select><br>
-            </td>
-        <td>
-            <label for="pkwiu_ean">PKWiU/EAN</label>
-            <input type="text" id="pkwiu_ean3"><br>
-        </td>
-        <tr>
-            <th>LP. 4</th>
-            <td>
-                <label for="nazwa_towaru">Nazwa towaru</label>
-                <input type="text" id="nazwa_towaru4" onchange="ceny()"><br>
-            </td>
-            <td>
-                <label for="Ilość">Ilość</label>
-                <input type="text" id="ilosc4" onchange="dwiefunkcje()"><br>
-            </td>
-            <td>
-                <label for="cena_jednostkowa">Cena jednostkowa</label>
-                <input type="number" min="0" id="cena_jednostkowa4" value="Cena jednostkowa" onchange="dwiefunkcje()"><br>
-            </td>
-            <td>
-                <label>Stawka VAT</label>
-                <select id="stawka_vat4" onchange="vaty()" onchange="sumy()">
-                    <option value="" hidden></option>
-                    <option value="23">23%</option>
-                    <option value="8">8%</option>
-                    <option value="5">5%</option>
-                    <option value="0">0%</option>
-                    <option value="01">ZW</option>
-                </select><br>
-            </td>
-        <td>
-            <label for="pkwiu_ean">PKWiU/EAN</label>
-            <input type="text" id="pkwiu_ean4"><br>
-        </td>
-        <tr>
-            <th>LP. 5</th>
-            <td>
-                <label for="nazwa_towaru">Nazwa towaru</label>
-                <input type="text" id="nazwa_towaru5" onchange="ceny()"><br>
-            </td>
-            <td>
-                <label for="Ilość">Ilość</label>
-                <input type="text" id="ilosc5" onchange="dwiefunkcje()"><br>
-            </td>
-            <td>
-                <label for="cena_jednostkowa">Cena jednostkowa</label>
-                <input type="number" min="0" id="cena_jednostkowa5" value="Cena jednostkowa" onchange="dwiefunkcje()"><br>
-            </td>
-            <td>
-                <label>Stawka VAT</label>
-                <select id="stawka_vat5" onchange="vaty()" onchange="sumy()">
-                    <option value="" hidden></option>
-                    <option value="23">23%</option>
-                    <option value="8">8%</option>
-                    <option value="5">5%</option>
-                    <option value="0">0%</option>
-                    <option value="01">ZW</option>
-                </select><br>
-            </td>
-        <td>
-            <label for="pkwiu_ean">PKWiU/EAN</label>
-            <input type="text" id="pkwiu_ean5"><br>
-        </td>
-    </tr>
+                <td>
+                    <input type="text" id="pkwiu_ean">
+                </td>
+                <td>
+                    <p id="nettotd1"></p>
+                </td>
+                <td>
+                    <p id="vattd1"></p>
+                </td>
+                <td>
+                    <p id="bruttotd1"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>
+                    <input type="text" id="nazwa_towaru2" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="text" id="ilosc2" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="number" min="0" id="cena_jednostkowa2" value="Cena jednostkowa" onchange="glowny()">
+                </td>
+                <td>
+                        <select id="stawka_vat2" onchange="glowny()">
+                        <option value="" hidden></option>
+                        <option value="23">23%</option>
+                        <option value="8">8%</option>
+                        <option value="5">5%</option>
+                        <option value="0">0%</option>
+                        <option value="01">ZW</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="pkwiu_ean">
+                </td>
+                <td>
+                    <p id="nettotd2"></p>
+                </td>
+                <td>
+                    <p id="vattd2"></p>
+                </td>
+                <td>
+                    <p id="bruttotd2"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    <input type="text" id="nazwa_towaru3" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="text" id="ilosc3" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="number" min="0" id="cena_jednostkowa3" value="Cena jednostkowa" onchange="glowny()">
+                </td>
+                <td>
+                        <select id="stawka_vat3" onchange="glowny()">
+                        <option value="" hidden></option>
+                        <option value="23">23%</option>
+                        <option value="8">8%</option>
+                        <option value="5">5%</option>
+                        <option value="0">0%</option>
+                        <option value="01">ZW</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="pkwiu_ean">
+                </td>
+                <td>
+                    <p id="nettotd3"></p>
+                </td>
+                <td>
+                    <p id="vattd3"></p>
+                </td>
+                <td>
+                    <p id="bruttotd3"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>
+                    <input type="text" id="nazwa_towaru4" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="text" id="ilosc4" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="number" min="0" id="cena_jednostkowa4" value="Cena jednostkowa" onchange="glowny()">
+                </td>
+                <td>
+                        <select id="stawka_vat4" onchange="glowny()">
+                        <option value="" hidden></option>
+                        <option value="23">23%</option>
+                        <option value="8">8%</option>
+                        <option value="5">5%</option>
+                        <option value="0">0%</option>
+                        <option value="01">ZW</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="pkwiu_ean">
+                </td>
+                <td>
+                    <p id="nettotd4"></p>
+                </td>
+                <td>
+                    <p id="vattd4"></p>
+                </td>
+                <td>
+                    <p id="bruttotd4"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>
+                    <input type="text" id="nazwa_towaru5" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="text" id="ilosc5" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="number" min="0" id="cena_jednostkowa5" value="Cena jednostkowa" onchange="glowny()">
+                </td>
+                <td>
+                        <select id="stawka_vat5" onchange="glowny()">
+                        <option value="" hidden></option>
+                        <option value="23">23%</option>
+                        <option value="8">8%</option>
+                        <option value="5">5%</option>
+                        <option value="0">0%</option>
+                        <option value="01">ZW</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="pkwiu_ean">
+                </td>
+                <td>
+                    <p id="nettotd5"></p>
+                </td>
+                <td>
+                    <p id="vattd5"></p>
+                </td>
+                <td>
+                    <p id="bruttotd5"></p>
+                </td>
+            </tr>
         </table>
-        </center>   
-
-            <label for="miejscowosc">Miejscowość</label>
-            <input type="text" id="miejscowosc" onchange="miasto()"><br>
-
-            <label for="wystawca">Wystawca</label>
-            <input type="text" id="wystawca" onchange="wystawca()"><br>
-
-            <label for="nabywca">Nabywca</label>
-            <input type="text" id="nabywca" onchange="nabywca()"><br>
+        </center> 
 
             <br>
-            <hr>
+            <hr>            
+            <br>
 
-            <section id="naglowek">
-                <section id="naglowek_lewo">
-                    <p id="wystawc">Wystawca: </p>
-                    <p id="nabywc">Nabywca: </p>
-                    <p id="miejsc">Miejscowość: </p>
-                </section>
-                <section id="naglowek_prawo">
-                    <p id="data_wystawienia">Data wystawienia:</p>
-                    <p id="data_sprzedazy">Data sprzedaży:</p>
-                </section>
-                <section id="nrfav">
-                    <p id="numer_faktury">Faktura VAT</p>
-                </section>
-            </section>
-
-            <center><table border="1">
-                <tr> 
-                    <th>LP</th>
-                    <th>Nazwa towaru</th>
-                    <th>Ilość</th>
-                    <th>Cena netto</th>
-                    <th>Wartość netto</th>
-                    <th>VAT</th>
-                    <th>Kwota VAT</th>
-                    <th>Wartość brutto</th>
-                </tr>
-                <tr>
-                    <td id="td1">1</td>
-                    <td id="td2"></td>
-                    <td id="td3"></td>
-                    <td id="td4"></td>
-                    <td id="td5"></td>
-                    <td id="td6"></td>
-                    <td id="td7"></td>
-                    <td id="td8"></td>
-                </tr>
-                <tr>
-                    <td id="td11">2</td>
-                    <td id="td22"></td>
-                    <td id="td33"></td>
-                    <td id="td44"></td>
-                    <td id="td55"></td>
-                    <td id="td66"></td>
-                    <td id="td77"></td>
-                    <td id="td88"></td>
-                </tr>
-                <tr>
-                    <td id="td111">3</td>
-                    <td id="td222"></td>
-                    <td id="td333"></td>
-                    <td id="td444"></td>
-                    <td id="td555"></td>
-                    <td id="td666"></td>
-                    <td id="td777"></td>
-                    <td id="td888"></td>
-                </tr>
-                <tr>
-                    <td id="td1111">4</td>
-                    <td id="td2222"></td>
-                    <td id="td3333"></td>
-                    <td id="td4444"></td>
-                    <td id="td5555"></td>
-                    <td id="td6666"></td>
-                    <td id="td7777"></td>
-                    <td id="td8888"></td>
-                </tr>
-                <tr>
-                    <td id="td11111">5</td>
-                    <td id="td22222"></td>
-                    <td id="td33333"></td>
-                    <td id="td44444"></td>
-                    <td id="td55555"></td>
-                    <td id="td66666"></td>
-                    <td id="td77777"></td>
-                    <td id="td88888"></td>
-                </tr>
-            </table></center>
-
-            <hr>
             <center>
-            <section id="Podsumowanie">
-                <p id="Kwota_do_zapłaty">Podsumowanie: Miało działać, przekombinowałem </p>
                 <table border="1">
-                    <tr>
-                        <th>SUMA netto</th>
-                        <th>Stawka VAT</th>
-                        <th>SUMA VAT</th>
-                        <th>SUMA brutto</th>
-                    </tr>
-                    <tr>
-                        <td ip="miejsc1"></td>
-                        <td>23%</td>
-                        <td ip="miejsc11"></td>
-                        <td ip="miejsc111"></td>
-                    </tr>
-                    <tr>
-                        <td ip="miejsc2"></td>
-                        <td>8%</td>
-                        <td ip="miejsc22"></td>
-                        <td ip="miejsc222"></td>
-                    </tr>
-                    <tr>
-                        <td ip="miejsc3"></td>
-                        <td>5%</td>
-                        <td ip="miejsc33"></td>
-                        <td ip="miejsc333"></td>
-                    </tr>
-                    <tr>
-                        <td ip="miejsc4"></td>
-                        <td>0%</td>
-                        <td ip="miejsc44"></td>
-                        <td ip="miejsc444"></td>
-                    </tr>
-                    <tr>
-                        <td ip="miejsc4"></td>
-                        <td>ZW</td>
-                        <td ip="miejsc44" style="border-bottom: 0px solid grey;"></td>
-                        <td ip="miejsc444"></td>
-                    </tr>
-                </table>
-            </center>
-
-            <hr><br>
-            <button onclick="dwiefunkcje()">adsa</button>
-            <table border="1">
                 <tr>
                     <td>
                         <p id="nettoo">Kwota Netto: </p>
@@ -309,10 +256,26 @@
                         <p id="bruttoo">Kwota Brutto: </p>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <p id="suma_netto"></p>
+                    </td>
+                    <td>
+                        <p id="suma_vat"></p>
+                    </td>
+                    <td>
+                        <p id="suma_brutto"></p>
+                    </td>
+                </tr>
             </table>
+                <button class="button" onclick="window.print()">Drukuj</button>
+            </center>    
             </section>
         </section>
+    </section>
     </section>
     <script src="main.js"></script>
 </body>
 </html>
+
+<!-- nany wszedzie nany -->
