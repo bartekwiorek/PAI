@@ -19,7 +19,7 @@
                 </td>
                 <td>
                     <label for="Ilość">Ilość</label>
-                    <input type="text" id="ilosc1" onchange="ceny()" onchange="sumy()"><br>
+                    <input type="text" id="ilosc1" onchange="dwiefunkcje()"><br>
                 </td>
                 <td>
                     <label for="cena_jednostkowa">Cena jednostkowa</label>
@@ -78,7 +78,7 @@
             </td>
             <td>
                 <label for="Ilość">Ilość</label>
-                <input type="text" id="ilosc3" onchange="ceny()" onchange="sumy()"><br>
+                <input type="text" id="ilosc3" onchange="dwiefunkcje()"><br>
             </td>
             <td>
                 <label for="cena_jednostkowa">Cena jednostkowa</label>
@@ -107,11 +107,11 @@
             </td>
             <td>
                 <label for="Ilość">Ilość</label>
-                <input type="text" id="ilosc4" onchange="ceny()" onchange="sumy()"><br>
+                <input type="text" id="ilosc4" onchange="dwiefunkcje()"><br>
             </td>
             <td>
                 <label for="cena_jednostkowa">Cena jednostkowa</label>
-                <input type="number" min="0" id="cena_jednostkowa4" value="Cena jednostkowa" onchange="ceny()" onchange="sumy()"><br>
+                <input type="number" min="0" id="cena_jednostkowa4" value="Cena jednostkowa" onchange="dwiefunkcje()"><br>
             </td>
             <td>
                 <label>Stawka VAT</label>
@@ -136,11 +136,11 @@
             </td>
             <td>
                 <label for="Ilość">Ilość</label>
-                <input type="text" id="ilosc5" onchange="ceny()" onchange="sumy()"><br>
+                <input type="text" id="ilosc5" onchange="dwiefunkcje()"><br>
             </td>
             <td>
                 <label for="cena_jednostkowa">Cena jednostkowa</label>
-                <input type="number" min="0" id="cena_jednostkowa5" value="Cena jednostkowa" onchange="ceny()" onchange="sumy()"><br>
+                <input type="number" min="0" id="cena_jednostkowa5" value="Cena jednostkowa" onchange="dwiefunkcje()"><br>
             </td>
             <td>
                 <label>Stawka VAT</label>
@@ -296,10 +296,20 @@
             </center>
 
             <hr><br>
-            
-            <p id="nettoo">Kwota Netto: </p>
-            <p id="vatt">Wartość VAT: </p>
-            <p id="bruttoo">Kwota Brutto: </p>
+            <button onclick="dwiefunkcje()">adsa</button>
+            <table border="1">
+                <tr>
+                    <td>
+                        <p id="nettoo">Kwota Netto: </p>
+                    </td>
+                    <td>
+                        <p id="vatt">Wartość VAT: </p>
+                    </td>
+                    <td>
+                        <p id="bruttoo">Kwota Brutto: </p>
+                    </td>
+                </tr>
+            </table>
             </section>
         </section>
     </section>

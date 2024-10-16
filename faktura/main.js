@@ -21,18 +21,18 @@
     numer_faktury.innerHTML = "Faktura VAT <b>" + nr_faktury +"/"+ mc +"/" + rok + "</b>"
 
 function miasto() {
-    let miast = document.getElementById("miejscowosc").value
+    var miast = document.getElementById("miejscowosc").value
     miejsc.innerHTML= "Miejscowość: <b>" + miast + "</b>"
 }
 function nabywca() {
-    let naby = document.getElementById("nabywca").value
+    var naby = document.getElementById("nabywca").value
     nabywc.innerHTML= "Nabywca: <b>" + naby + "</b>"
 }
 function wystawca() {
-    let wyst = document.getElementById("wystawca").value
+    var wyst = document.getElementById("wystawca").value
     wystawc.innerHTML= "Wystawca: <b>" + wyst + "</b>"
 }
-function ceny() {
+function glowna() {
     nazwa_towaru1 = document.getElementById("nazwa_towaru1").value
     nazwa_towaru2 = document.getElementById("nazwa_towaru2").value
     nazwa_towaru3 = document.getElementById("nazwa_towaru3").value
@@ -91,6 +91,11 @@ function ceny() {
     w_netto3 = cena_jednostkowa3 * ilosc3
     w_netto4 = cena_jednostkowa4 * ilosc4
     w_netto5 = cena_jednostkowa5 * ilosc5
+    w_netto1 = parseFloat(w_netto1)
+    w_netto2 = parseFloat(w_netto2)
+    w_netto3 = parseFloat(w_netto3)
+    w_netto4 = parseFloat(w_netto4)
+    w_netto5 = parseFloat(w_netto5)
     ww_netto1=w_netto1
     ww_netto2=w_netto2
     ww_netto3=w_netto3
@@ -102,17 +107,16 @@ function ceny() {
     td555.innerHTML = ww_netto3 + "zł"
     td5555.innerHTML = ww_netto4 + "zł"
     td55555.innerHTML = ww_netto5 + "zł"
-}
-function vaty() {
-    let vat1 = document.getElementById("stawka_vat1").value
+
+    var vat1 = document.getElementById("stawka_vat1").value
     vat1 = parseInt(vat1)
-    let vat2 = document.getElementById("stawka_vat2").value
+    var vat2 = document.getElementById("stawka_vat2").value
     vat2 = parseInt(vat2)
-    let vat3 = document.getElementById("stawka_vat3").value
+    var vat3 = document.getElementById("stawka_vat3").value
     vat3 = parseInt(vat3)
-    let vat4 = document.getElementById("stawka_vat4").value
+    var vat4 = document.getElementById("stawka_vat4").value
     vat4 = parseInt(vat4)
-    let vat5 = document.getElementById("stawka_vat5").value
+    var vat5 = document.getElementById("stawka_vat5").value
     vat5 = parseInt(vat5)
 
 //1
@@ -257,6 +261,11 @@ function vaty() {
         kwota_vat3 = kwota_vat3.toFixed(2)
         kwota_vat4 = kwota_vat4.toFixed(2)
         kwota_vat5 = kwota_vat5.toFixed(2)
+        kwota_vat1 = parseFloat(kwota_vat1)
+        kwota_vat2 = parseFloat(kwota_vat2)
+        kwota_vat3 = parseFloat(kwota_vat3)
+        kwota_vat4 = parseFloat(kwota_vat4)
+        kwota_vat5 = parseFloat(kwota_vat5)
         td7.innerHTML = kwota_vat1  + "zł"
         td77.innerHTML = kwota_vat2  + "zł"
         td777.innerHTML = kwota_vat3  + "zł"
@@ -287,22 +296,29 @@ function vaty() {
         wartosc_brutto5 = parseFloat(wartosc_brutto5)
         wartosc_brutto5 = wartosc_brutto5.toFixed(2)
         td88888.innerHTML = wartosc_brutto5 + "zł"
-}
-function sumy(){
-    let suma_wartosc_netto = 0
-    let suma_kwota_VAT = 0
-    let suma_wartosc_brutto = 0
-    alert(suma_kwota_VAT)
 
-    parseFloat(suma_wartosc_netto) = parseFloat(suma_wartosc_netto + w_netto1 + w_netto2 + w_netto3 + w_netto4 + w_netto5)
-    parseFloat(suma_kwota_VAT) = parseFloat(suma_kwota_VAT + vat1 + vat2 + vat3 + vat4 + vat5)
-    parseFloat(suma_wartosc_brutto) = parseFloat(wartosc_brutto1 + wartosc_brutto2 + wartosc_brutto3 + wartosc_brutto4 + wartosc_brutto5)
+        wartosc_brutto1 = parseFloat(wartosc_brutto1)
+        wartosc_brutto2 = parseFloat(wartosc_brutto2)
+        wartosc_brutto3 = parseFloat(wartosc_brutto3)
+        wartosc_brutto4 = parseFloat(wartosc_brutto4)
+        wartosc_brutto5 = parseFloat(wartosc_brutto5)
+
+    var suma_wartosc_netto = w_netto1 + w_netto2 + w_netto3 + w_netto4 + w_netto5 //działa
+    var suma_kwota_VAT = kwota_vat1 + kwota_vat2 + kwota_vat3 + kwota_vat4 + kwota_vat5
+    var suma_wartosc_brutto = wartosc_brutto1 + wartosc_brutto2 + wartosc_brutto3 + wartosc_brutto4 + wartosc_brutto5
     
     suma_wartosc_netto = parseFloat(suma_wartosc_netto)
     suma_kwota_VAT = parseFloat(suma_kwota_VAT) 
     suma_wartosc_brutto = parseFloat(suma_wartosc_brutto)
+    suma_wartosc_brutto = suma_wartosc_brutto.toFixed(2)
+    suma_kwota_VAT = suma_kwota_VAT.toFixed(2)
+    suma_wartosc_netto = suma_wartosc_netto.toFixed(2)
 
-    nettoo.innerHTML = suma_wartosc_netto
-    vatt.innerHTML = suma_kwota_VAT
-    bruttoo.innerHTML = suma_wartosc_brutto
+    nettoo.innerHTML = "Kwota Netto: "+ suma_wartosc_netto + "zł"
+    vatt.innerHTML = "Wartość VAT: " + suma_kwota_VAT + "zł"
+    bruttoo.innerHTML ="Kwota Brutto: " + suma_wartosc_brutto + "zł"
+}
+function dwiefunkcje(){
+    sumy();
+    ceny();
 }
