@@ -8,27 +8,7 @@
     text-align: center;
     margin: 10px;
     padding-bottom: 20px;
-    background-color: grey;
-}
-#naglowek{
-    border: 1px black solid;
-    padding: 10px;
-    margin: 10px;
-    background-color: grey;
-    text-align: right;
-    padding-right: 200px;
-    font-size: 18px;
-    display: flex;
-}
-#naglowek_prawo{
-    width: 49%;
-    text-align: center;
-
-}
-#naglowek_lewo{
-    text-align: center;
-    width: 49%;
-    float: right;
+    background-color: lightgray;
 }
 #nrfav{
     float: left;
@@ -52,4 +32,11 @@ th{
 td, tr{
     padding: 10px;
     margin: 10px;
+}
+input, select{
+    background-color: lightgray;
+    border: 1px black solid;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
 }
