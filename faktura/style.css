@@ -14,8 +14,8 @@
     float: left;
 }
 #faktura{
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
 }
 hr {
     border-top: 1px solid rgb(0, 0, 0);
@@ -30,13 +30,20 @@ th{
     padding: 5px;
 }
 td, tr{
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
 }
 input, select{
     background-color: lightgray;
     border: 1px black solid;
     padding: 5px;
-    margin: 10px;
+    margin: 5px;
     text-align: center;
+}
+button{
+    font-size: 18px;
+    border-radius: 14px;
+    padding: 24px;
+    border: 1px black solid;
+    background-color: lightgrey;
 }
