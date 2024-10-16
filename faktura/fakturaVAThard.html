@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faktura VAT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="kontener">
+        <h2>Fakturka</h2>
+        <details> 
+            <summary style="color: red">18+</summary> 
+            <b>Bogdan Boner:</b> No dobra, dwie stówy, trzy jak z fakturą, czyli się nie opyla, i biorę się do roboty. <br><b>Mężczyzna:</b> Nie no z fakturą, z fakturą, bo to na firmę idzie.<br><b>Bogdan Boner:</b> Kurwa mać, to żeś pan wymyślił. To ja muszę działalność założyć...<br>sezon 2 odcinek 4 "kartel diabolico" 4:30 minuta NETFLIX
+        </details>
+        <center>
+            <section id="naglowek">
+                <section id="naglowek_lewo">
+                    <table border="1">
+                    <tr>
+                        <td>
+                    <label for="miejscowosc">Miejscowość</label>
+                    <input type="text" id="miejscowosc" onchange="miasto()">
+                        </td>
+                        <td>
+                    <label for="wystawca">Wystawca</label>
+                    <input type="text" id="wystawca" onchange="wystawca()">
+                        </td>
+                        <td>
+                    <label for="nabywca">Nabywca</label>
+                    <input type="text" id="nabywca" onchange="nabywca()">
+                        </td>
+                    </tr>
+                </table>
+                </section>
+                <section id="naglowek_prawo">
+                    <table border="1">
+                    <tr>
+                        <td>
+                        <label for="data_wystawie">Data wystawienia</label>
+                        <input type="date" id="data_wystawie" onchange="glowny()">
+                        </td>
+                        <td>
+                        <label for="data_sprzedaz">Data sprzedaży</label>
+                        <input type="date" id="data_sprzedaz" onchange="glowny()">
+                        </td>
+                    </tr>
+                    </table>
+                    <table border="1">
+                    <tr>
+                        <td>
+                        <p id="numer_faktury">Faktura VAT</p>
+                        </td>
+                    </tr>
+                </section>
+            </table>
+        </center>
+
+        <section id="faktura">
+        <center>
+        <table border="1" id="tabelka">
+            <tr>
+                <th>LP</th>
+                <th>Nazwa towaru</th>
+                <th>Ilość</th>
+                <th>Cena jednostkowa</th>
+                <th>Stawka VAT</th>
+                <th>PKWiU/EAN</th>
+                <th>Wartość Netto</th>
+                <th>Wartość VAT</th>
+                <th>Wartość Brutto</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>
+                    <input type="text" id="nazwa_towaru1" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="text" id="ilosc1" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="number" min="0" id="cena_jednostkowa1" value="Cena jednostkowa" onchange="glowny()">
+                </td>
+                <td>
+                        <select id="stawka_vat1" onchange="glowny()">
+                        <option value="" hidden></option>
+                        <option value="23">23%</option>
+                        <option value="8">8%</option>
+                        <option value="5">5%</option>
+                        <option value="0">0%</option>
+                        <option value="01">ZW</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="pkwiu_ean">
+                </td>
+                <td>
+                    <p id="nettotd1"></p>
+                </td>
+                <td>
+                    <p id="vattd1"></p>
+                </td>
+                <td>
+                    <p id="bruttotd1"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>
+                    <input type="text" id="nazwa_towaru2" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="text" id="ilosc2" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="number" min="0" id="cena_jednostkowa2" value="Cena jednostkowa" onchange="glowny()">
+                </td>
+                <td>
+                        <select id="stawka_vat2" onchange="glowny()">
+                        <option value="" hidden></option>
+                        <option value="23">23%</option>
+                        <option value="8">8%</option>
+                        <option value="5">5%</option>
+                        <option value="0">0%</option>
+                        <option value="01">ZW</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="pkwiu_ean">
+                </td>
+                <td>
+                    <p id="nettotd2"></p>
+                </td>
+                <td>
+                    <p id="vattd2"></p>
+                </td>
+                <td>
+                    <p id="bruttotd2"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    <input type="text" id="nazwa_towaru3" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="text" id="ilosc3" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="number" min="0" id="cena_jednostkowa3" value="Cena jednostkowa" onchange="glowny()">
+                </td>
+                <td>
+                        <select id="stawka_vat3" onchange="glowny()">
+                        <option value="" hidden></option>
+                        <option value="23">23%</option>
+                        <option value="8">8%</option>
+                        <option value="5">5%</option>
+                        <option value="0">0%</option>
+                        <option value="01">ZW</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="pkwiu_ean">
+                </td>
+                <td>
+                    <p id="nettotd3"></p>
+                </td>
+                <td>
+                    <p id="vattd3"></p>
+                </td>
+                <td>
+                    <p id="bruttotd3"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>
+                    <input type="text" id="nazwa_towaru4" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="text" id="ilosc4" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="number" min="0" id="cena_jednostkowa4" value="Cena jednostkowa" onchange="glowny()">
+                </td>
+                <td>
+                        <select id="stawka_vat4" onchange="glowny()">
+                        <option value="" hidden></option>
+                        <option value="23">23%</option>
+                        <option value="8">8%</option>
+                        <option value="5">5%</option>
+                        <option value="0">0%</option>
+                        <option value="01">ZW</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="pkwiu_ean">
+                </td>
+                <td>
+                    <p id="nettotd4"></p>
+                </td>
+                <td>
+                    <p id="vattd4"></p>
+                </td>
+                <td>
+                    <p id="bruttotd4"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>
+                    <input type="text" id="nazwa_towaru5" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="text" id="ilosc5" onchange="glowny()">
+                </td>
+                <td>
+                    <input type="number" min="0" id="cena_jednostkowa5" value="Cena jednostkowa" onchange="glowny()">
+                </td>
+                <td>
+                        <select id="stawka_vat5" onchange="glowny()">
+                        <option value="" hidden></option>
+                        <option value="23">23%</option>
+                        <option value="8">8%</option>
+                        <option value="5">5%</option>
+                        <option value="0">0%</option>
+                        <option value="01">ZW</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="pkwiu_ean">
+                </td>
+                <td>
+                    <p id="nettotd5"></p>
+                </td>
+                <td>
+                    <p id="vattd5"></p>
+                </td>
+                <td>
+                    <p id="bruttotd5"></p>
+                </td>
+            </tr>
+        </table>
+        </center> 
+
+            <br>
+            <hr>            
+            <br>
+
+            <center>
+                <table border="1">
+                <tr>
+                    <td>
+                        <p id="nettoo">Kwota Netto: </p>
+                    </td>
+                    <td>
+                        <p id="vatt">Wartość VAT: </p>
+                    </td>
+                    <td>
+                        <p id="bruttoo">Kwota Brutto: </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="suma_netto"></p>
+                    </td>
+                    <td>
+                        <p id="suma_vat"></p>
+                    </td>
+                    <td>
+                        <p id="suma_brutto"></p>
+                    </td>
+                </tr>
+            </table>
+                <button class="button" onclick="window.print()">Drukuj</button>
+            </center>    
+            </section>
+        </section>
+    </section>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
+
+<!-- nany wszedzie nany -->
