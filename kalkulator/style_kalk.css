@@ -1,0 +1,33 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-size: 18px;
+}
+table{
+    border: 1px grey solid;
+    background-color: grey;
+}
+th{
+    background-color: lightgray;
+}
+input{
+    text-align: right;
+}
+td{
+    background-color: rgb(58, 54, 107);
+}
+button{
+    background-color: rgb(58, 54, 107);
+    color: white;
+    border: 0px;
+}
+#czysc_button{
+    text-align: center;
+    background-color: rgb(116, 3, 3);
+    color: white;
+    width: auto;
+}
+button:hover{
+    background-color: rgb(197, 201, 148);
+    color: black;
+}
