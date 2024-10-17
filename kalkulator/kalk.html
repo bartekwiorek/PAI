@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="style_kalk.css"
+</head>
+<body>
+    
+    <section id="kontener">
+        <section id="kalkulator"
+            <section id ="przyciski">
+                <table border="1">
+                    <tr>
+                        <th colspan="4">
+                            <input type="text" id="miejsce">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th id="czysc_button" colspan="4">
+                            <button id="czysc_button" onclick="czysc()">C</button>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td><button onclick="calc('7')">7</button>
+                        <td><button onclick="calc('8')">8</button>
+                        <td><button onclick="calc('9')">9</button>
+                        <td><button onclick="calc('+')">+</button>
+                    </tr>
+                    <tr>
+                        <td><button onclick="calc('4')">4</button>
+                        <td><button onclick="calc('5')">5</button>
+                        <td><button onclick="calc('6')">6</button>
+                        <td><button onclick="calc('-')">-</button>
+                    </tr>
+                    <tr>
+                        <td><button onclick="calc('1')">1</button>
+                        <td><button onclick="calc('2')">2</button>
+                        <td><button onclick="calc('3')">3</button>
+                        <td><button onclick="calc('*')">*</button>
+                    </tr>
+                    <tr>
+                        <td><button onclick="calc(',')">,</button>
+                        <td><button onclick="calc('0')">0</button>
+                        <td><button onclick="oblicz()">=</button>
+                        <td><button onclick="calc('/')">/</button>
+                    </tr>
+                </table>
+            </section>
+    </section>
+    <script src="main_kalk.js"></script>
+</body>
+</html>
