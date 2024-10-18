@@ -1,15 +1,3 @@
-// function miasto() {
-    // var miast = document.getElementById("miejscowosc").value
-    // miejsc.innerHTML= "Miejscowość: <b>" + miast + "</b>"
-
-// function nabywca() {
-    // var naby = document.getElementById("nabywca").value
-    // nabywc.innerHTML= "Nabywca: <b>" + naby + "</b>"
-
-// function wystawca() {
-    // var wyst = document.getElementById("wystawca").value
-    // wystawc.innerHTML= "Wystawca: <b>" + wyst + "</b>"
-
 function glowny() {
     data = new Date();
     rok = data.getFullYear();
@@ -25,10 +13,15 @@ function glowny() {
     if(mi<10){mi="0"+mi}
     if(se<10){se="0"+se}
 
+    var wystawieniadata = document.getElementById("data_wystawie").value
+    var miesiac = wystawieniadata.substr(5,2)
+    var rk = wystawieniadata.substr(0,4)
+
     nr_faktury = 1
     mc=parseInt(mc)
     rok=parseInt(rok)
-    numer_faktury.innerHTML = "Faktura VAT <b>" + nr_faktury + "/"+ mc + "/" + rok
+
+    numer_faktury.innerHTML = "Faktura VAT <b>" + nr_faktury + "/"+ miesiac + "/" + rk
 
     ilosc1 = document.getElementById("ilosc1").value
     ilosc1 = parseFloat(ilosc1)
